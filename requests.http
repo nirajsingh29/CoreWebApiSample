@@ -1,0 +1,37 @@
+### Generate a token
+POST http://localhost:5143/token
+Content-Type: application/json
+
+
+### Get all users (with token)
+GET http://localhost:5143/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3R1c2VyIiwibmJmIjoxNzM3NzEyMzQ3LCJleHAiOjE3Mzc3MTU5NDcsImlhdCI6MTczNzcxMjM0NywiaXNzIjoiWW91cklzc3VlciIsImF1ZCI6IllvdXJBdWRpZW5jZSJ9.ZbpmO0uSVvAs9IVD8q-xqd_obYtJJ2XRtgjtflUTr5Q
+Accept: application/json
+
+### Get a user by ID (with token)
+GET http://localhost:5143/users/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3R1c2VyIiwibmJmIjoxNzM3NzEyMzQ3LCJleHAiOjE3Mzc3MTU5NDcsImlhdCI6MTczNzcxMjM0NywiaXNzIjoiWW91cklzc3VlciIsImF1ZCI6IllvdXJBdWRpZW5jZSJ9.ZbpmO0uSVvAs9IVD8q-xqd_obYtJJ2XRtgjtflUTr5Q
+Accept: application/json
+
+### Create a new user (with token)
+POST http://localhost:5143/users
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "John Doe3"
+}
+
+### Update a user (with token)
+PUT http://localhost:5143/users/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Jane Doe"
+}
+
+### Delete a user (with token)
+DELETE http://localhost:5143/users/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3R1c2VyIiwibmJmIjoxNzM3NzEyMzQ3LCJleHAiOjE3Mzc3MTU5NDcsImlhdCI6MTczNzcxMjM0NywiaXNzIjoiWW91cklzc3VlciIsImF1ZCI6IllvdXJBdWRpZW5jZSJ9.ZbpmO0uSVvAs9IVD8q-xqd_obYtJJ2XRtgjtflUTr5Q
+Accept: application/json
